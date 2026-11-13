@@ -1,0 +1,18 @@
+
+namespace org.example.vehicle
+
+participant Owner identified by ownerId {
+    o String ownerId
+    o String name
+}
+
+asset Vehicle identified by vin {
+    o String vin
+    o String model
+    --> Owner owner
+}
+
+transaction TransferVehicle {
+    --> Vehicle vehicle
+    --> Owner newOwner
+}

@@ -1,0 +1,7 @@
+
+rule Default {
+    participant: "ANY"
+    operation: ALL
+    resource: "org.example.vehicle.*"
+    action: ALLOW
+}
